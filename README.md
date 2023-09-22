@@ -112,10 +112,15 @@ To run the project, execute the following command:
 ```sh
   rails server
 ```
-To check & fix linters 
+To check & fix linters: 
 ```sh
   rubocop --color
   npx stylelint "**/*.{css,scss}"
+```
+To auto correct: 
+```bash 
+   rubocop -a
+   rubocop -A
 ```
 ### Troubleshooting
 
