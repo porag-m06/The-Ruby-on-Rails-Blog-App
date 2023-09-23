@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   let(:user) { User.create(name: 'Test User', posts_counter: 0) }
-  let(:post) { Post.create(author: user, title: 'Hello', text: 'post1', comments_counter: 0, likes_counter: 0) }
+  let(:post) { Post.create(author: user, title: 'Hello', text: 'post1', comments_counter: 3, likes_counter: 7) }
 
   it 'Post must have a title present' do
     post.title = nil
@@ -34,5 +34,20 @@ RSpec.describe Post, type: :model do
     expect(post).to_not be_valid
   end
 
+  describe '#user_posts_counter_updater' do
+    it 'updates the posts_counter and returns the correct count' do
+      expect(post.user_posts_counter_updater).to eq(1)
+    end
+  end
 
+  describe '#five_recent_comments' do
+    let!(:recent_comments) do
+      5.times.map do
+        Comment.create(post:, user:, text: 'Hi Tom!')
+      end
+    end
+    it 'returns the five most recent comments' do
+      expect(post.five_recent_comments.length).to eq(5)
+    end
+  end
 end
