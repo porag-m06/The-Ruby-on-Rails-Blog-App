@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
   let(:user) { User.create(name: 'Porag', posts_counter: 5) }
 
   it 'Should validate presence of name' do
-    user.name = nill
+    user.name = nil
     expect(user).to_not be_valid
   end
 
