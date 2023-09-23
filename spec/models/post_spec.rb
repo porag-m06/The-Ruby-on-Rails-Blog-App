@@ -24,4 +24,15 @@ RSpec.describe Post, type: :model do
     expect(post).to_not be_valid
   end
 
+  it 'Post likes_counter mustbe only integer' do
+    post.likes_counter = true
+    expect(post).to_not be_valid
+  end
+
+  it 'Post likes_counter mustbe greater than or equla to 0' do
+    post.likes_counter = -1
+    expect(post).to_not be_valid
+  end
+
+
 end
