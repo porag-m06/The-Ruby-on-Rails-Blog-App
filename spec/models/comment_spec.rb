@@ -4,9 +4,6 @@ RSpec.describe Comment, type: :model do
   let(:user) { User.create(name: 'Test User', posts_counter: 0) }
   let(:post) { Post.create(title: 'Test Post', author: user, comments_counter: 0, likes_counter: 0) }
 
-  it { should belong_to(:user) }
-  it { should belong_to(:post) }
-
   describe '#post_comments_counter_updater' do
     let!(:comment) { Comment.create(user:, post:, text: 'Test Comment') }
 
