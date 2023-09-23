@@ -8,7 +8,7 @@ RSpec.describe Like, type: :model do
   it { should belong_to(:post) }
 
   describe '#post_likes_counter_updater' do
-    let!(:like) { Like.create(user: user, post: post) }
+    let!(:like) { Like.create(user:, post:) }
 
     it 'updates the likes_counter and returns the correct count' do
       expect(like.post_likes_counter_updater).to eq(1)

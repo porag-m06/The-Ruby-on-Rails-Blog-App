@@ -8,7 +8,7 @@ RSpec.describe Comment, type: :model do
   it { should belong_to(:post) }
 
   describe '#post_comments_counter_updater' do
-    let!(:comment) { Comment.create(user: user, post: post, text: 'Test Comment') }
+    let!(:comment) { Comment.create(user:, post:, text: 'Test Comment') }
 
     it 'updates the comments_counter and returns the correct count' do
       expect(comment.post_comments_counter_updater).to eq(1)
