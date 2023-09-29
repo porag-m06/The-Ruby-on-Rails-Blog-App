@@ -11,6 +11,10 @@ RSpec.describe 'Users', type: :request do
       expect(response.status).to eq(200)
     end
 
+    it 'renders the index template' do
+      expect(response).to render_template(:index)
+    end
+
     it 'responds with the correct body' do
       expect(response.body).to include('Showing all users in: users#index ( will be the root actually)')
     end
@@ -26,6 +30,10 @@ RSpec.describe 'Users', type: :request do
 
     it 'responds with http success' do
       expect(response.status).to eq(200)
+    end
+
+    it 'renders the show template' do
+      expect(response).to render_template(:show)
     end
 
     it 'responds with the correct body' do

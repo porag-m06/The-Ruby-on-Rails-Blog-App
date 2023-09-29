@@ -12,6 +12,10 @@ RSpec.describe 'Posts', type: :request do
       expect(response.status).to eq(200)
     end
 
+    it 'renders the index template' do
+      expect(response).to render_template(:index)
+    end
+
     it 'responds with the correct body' do
       expect(response.body).to include('Showing all posts of the selected user.')
     end
@@ -27,6 +31,10 @@ RSpec.describe 'Posts', type: :request do
 
     it 'responds with http success' do
       expect(response.status).to eq(200)
+    end
+
+    it 'renders the show template' do
+      expect(response).to render_template(:show)
     end
 
     it 'responds with the correct body' do
