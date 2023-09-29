@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
-
-   # Show All Users
-   describe 'GET/index' do
+  # Show All Users
+  describe 'GET/index' do
     before do
       get users_url
     end
@@ -33,5 +32,4 @@ RSpec.describe 'Users', type: :request do
       expect(response.body).to include('Showing selected user details.')
     end
   end
-
 end
