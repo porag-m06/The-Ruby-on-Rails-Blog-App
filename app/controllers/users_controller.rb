@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  
   # HTTP METHOD: GET URL pattern: /users
   # Shows or fetches all users with image & User name + Number of posts : view 1
   def index
@@ -11,5 +10,4 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
   end
-  
 end

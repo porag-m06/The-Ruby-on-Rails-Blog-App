@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   # GET  /users/:user_id/posts
   # Fetching the all posts of the user with id = :user_id
   def index
@@ -12,5 +11,4 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
   end
-  
 end
