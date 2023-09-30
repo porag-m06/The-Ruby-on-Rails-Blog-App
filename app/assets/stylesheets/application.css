@@ -52,6 +52,10 @@ body {
   text-align: right;
 }
 
+.d-margin {
+  margin-bottom: 30px;
+}
+
 .bio {
   width: 92%;
   border: 1px solid gray;
@@ -67,4 +71,9 @@ body {
 .posts-details {
   margin: 40px 0px;
   text-align: center;
+}
+
+.comments {
+  margin: 0;
+  text-align: left !important;
 }
