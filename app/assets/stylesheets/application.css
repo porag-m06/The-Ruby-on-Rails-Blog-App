@@ -6,6 +6,7 @@ body {
 .user-container {
   width: 100%;
 }
+
 .profile {
   display: flex;
 }
@@ -74,7 +75,7 @@ body {
 }
 
 .comments {
-  margin: 0;
+  margin: 0px;
   text-align: left !important;
 }
 
