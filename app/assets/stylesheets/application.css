@@ -70,12 +70,12 @@ body {
 }
 
 .posts-details {
-  margin: 40px 0px;
+  margin: 40px 0.5px;
   text-align: center;
 }
 
 .comments {
-  margin: 0px;
+  margin: 0.5px;
   text-align: left !important;
 }
 
