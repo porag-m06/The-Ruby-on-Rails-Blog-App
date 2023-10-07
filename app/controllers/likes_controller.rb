@@ -12,7 +12,7 @@ class LikesController < ApplicationController
     if @like.save
       redirect_to user_post_path(current_user, @post)
     else
-      render :new
+      redirect_to user_posts_path(current_user)
     end
   end
 end
