@@ -30,7 +30,8 @@ class PostsController < ApplicationController
     end
   end
 
-  private def allowed_post_params
+  private 
+  def allowed_post_params
     params.require(:post).permit(:title, :text)
   end
 end
