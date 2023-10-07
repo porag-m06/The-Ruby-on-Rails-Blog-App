@@ -92,3 +92,7 @@ body {
   border-radius: 15px;
   margin: 7px 3px 20px 3px;
 }
+
+.like-comment{
+  flex-direction: row;
+}
