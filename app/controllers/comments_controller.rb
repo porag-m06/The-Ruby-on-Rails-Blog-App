@@ -1,9 +1,8 @@
 class CommentsController < ApplicationController
-  
   before_action :set_post, only: %i[new create]
-  
+
   def set_post
-      @post = Post.find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   def new

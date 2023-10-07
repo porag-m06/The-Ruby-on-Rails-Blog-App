@@ -20,8 +20,8 @@ class PostsController < ApplicationController
   def create
     @new_post_model = Post.new(allowed_post_params)
     @new_post_model.author_id = current_user.id
-    @new_post_model.comments_counter = 0;
-    @new_post_model.likes_counter = 0;
+    @new_post_model.comments_counter = 0
+    @new_post_model.likes_counter = 0
 
     if @new_post_model.save
       redirect_to user_post_url(current_user, @new_post_model)
@@ -33,5 +33,4 @@ class PostsController < ApplicationController
   private def allowed_post_params
     params.require(:post).permit(:title, :text)
   end
-  
 end
