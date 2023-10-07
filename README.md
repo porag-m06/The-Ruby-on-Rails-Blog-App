@@ -141,7 +141,7 @@ To run tests, run the following command:
 > Developed by: 
 ### Md. Porag Sarkar
 - GitHub: [@porag-m06](https://github.com/porag-m06)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- Twitter: [@twitterhandle](https://twitter.com/rarebird06)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/muhammad-porag-nsu-cse/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
